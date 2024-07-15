@@ -23,7 +23,6 @@ body {
     border: 2px solid #ccc;
     overflow: hidden;
     overflow-y: auto;
-    text-align: left;
 }
 
 .head {
@@ -45,6 +44,7 @@ textarea {
     font-size: 17px;
     resize: none;
     background: #eceeee;
+    text-align: left;
 }
 
 .markdown {
@@ -55,5 +55,6 @@ textarea {
     height: 100%;
     resize: none;
     overflow-x: hidden;
-    background: #fff;
+    background: #eceeee;
+    text-align: left;
 }
