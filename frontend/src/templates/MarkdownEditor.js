@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import ReactMarkdown from "react-markdown";
 
 export default function MarkdownEditor() {
