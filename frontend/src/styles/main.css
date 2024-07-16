@@ -9,18 +9,19 @@ body {
     width: 100%;
     height: 100vh;
     align-items: center;
+    background-color: #373a40;
 }
 
 .wrapper {
-    width: 45%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     outline: none;
     display: flex;
     padding: 20px;
-    background: #eceeee;
+    background: #373a40;
     flex-direction: column;
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
     overflow: hidden;
     overflow-y: auto;
 }
@@ -28,10 +29,11 @@ body {
 .head {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eeeeee;
     display: flex;
     align-items: center;
     font-size: 15px;
+    color: #dc5f00;
 }
 
 textarea {
@@ -43,7 +45,8 @@ textarea {
     overflow-x: hidden;
     font-size: 17px;
     resize: none;
-    background: #eceeee;
+    color: #eeeeee;
+    background: #373a40;
     text-align: left;
 }
 
@@ -55,6 +58,7 @@ textarea {
     height: 100%;
     resize: none;
     overflow-x: hidden;
-    background: #eceeee;
+    background: #373a40;
+    color: #eeeeee;
     text-align: left;
 }
