@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
-import ReactMarkdown from "react-markdown";
+import { marked } from "marked";
 
 export default function MarkdownEditor() {
   const [markdownInput, setMarkdownInput] = useState("");
@@ -19,17 +19,19 @@ export default function MarkdownEditor() {
     };
   }, []);
 
+  const renderedMarkdown = marked(markdownInput, {
+    breaks: true,
+    gfm: true,
+  });
+
   return (
     <div className="App">
       <div className="wrapper">
         <div className="head">{showPreview ? "PREVIEW" : "MARKDOWN"}</div>
         {showPreview ? (
-          <ReactMarkdown
+          <div
             className="markdown"
-            children={markdownInput}
-            components={{
-              code: MarkComponent,
-            }}
+            dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
           />
         ) : (
           <textarea
@@ -43,7 +45,3 @@ export default function MarkdownEditor() {
     </div>
   );
 }
-
-const MarkComponent = ({ value }) => {
-  return <code>{value}</code>;
-};
